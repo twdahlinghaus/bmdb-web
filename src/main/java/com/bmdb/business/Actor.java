@@ -1,5 +1,7 @@
 package com.bmdb.business;
 
+import java.time.LocalDate;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,13 +16,13 @@ public class Actor {
 	private String firstName;
 	private String lastName;
 	private String gender;
-	private int birthDate;
+	private LocalDate birthDate;
 	
 	public Actor() {
 		super();
 	}
 
-	public Actor(int id, String firstName, String lastName, String gender, int birthDate) {
+	public Actor(int id, String firstName, String lastName, String gender, LocalDate birthDate) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
@@ -61,11 +63,11 @@ public class Actor {
 		this.gender = gender;
 	}
 
-	public int getBirthDate() {
+	public LocalDate getBirthDate() {
 		return birthDate;
 	}
 
-	public void setBirthDate(int birthDate) {
+	public void setBirthDate(LocalDate birthDate) {
 		this.birthDate = birthDate;
 	}
 

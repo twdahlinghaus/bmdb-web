@@ -40,7 +40,7 @@ public class MovieController {
 		
 	}
 		
-	@DeleteMapping("/") 
+	@DeleteMapping("/{id}") 
 	public Movie delete(@PathVariable int id) {
 		Optional<Movie> movie = movieRepo.findById(id);
 		if (movie.isPresent()) {
